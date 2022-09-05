@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.maindiv{
+    background-color: rgb(102, 122, 255);
+    color:white;
+    display: block;
+    width:15vw;
+    height: 100vh;
+}
+
+.boxes{
+    background-color: rgb(102, 122, 255);
+    color:white;
+    width:15vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+#nodecoration{
+        text-decoration: none;
+}
+.boxes:hover{
+    background-color: rgb(70, 92, 236);
+}
+
+.boxes:active{
+    background-color: white;
+    color:rgb(102, 122, 255);
+}
+
+.profilepic{
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+

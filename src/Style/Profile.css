@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e1e4fb;
+}
+
+.dp{
+    border-radius: 10%;
+    border:3px solid black;
+    width:10em;
+    height:10em;
+}
+
+.items{
+    color: rgb(102, 122, 255);
+    width:auto;
+    height:auto;
+    padding:5px 20px;
+    font-size: 1.5rem;
+    margin-left:20px;
+}
+
+.daj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.dajt{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
+.dajth{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px;
+}
+
+.dajf{
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px;
+}
+
+.suggest{
+    width:auto;
+    overflow: auto; 
+    height:30vh;
+}
+
+.suggestbox, .activitybox{
+    min-width:auto;
+    height:auto;
+    box-shadow: 10px 10px 10px #e1e4fb;
+    background-color: white;
+    color:rgb(102, 122, 255);
+    margin:5px;
+}
+
+.activitybox:hover{
+    box-shadow: 10px 10px 10px black;
+    cursor: pointer;
+}
+
+.profileradius, .suggestbox{
+    border-radius: 10px;
+}
+
+.profileradius:hover{
+    box-shadow: 5px 5px 9px black;
+    cursor:pointer;
+}
+
+.suggest::-webkit-scrollbar{
+    display:none;
+}
+
+.followaddbtn{
+    background-color:rgb(102, 122, 255);
+    color:white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding:5px 10px;
+    border:0px;
+}
+
+.navclass{
+    position:fixed;
+    float:left;
+    clear:both;
+    top:0;
+}

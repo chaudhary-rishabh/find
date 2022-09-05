@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navdiv{
+    float:left;
+    position: fixed;
+}
+
+.mainmessage{
+    margin-left: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messagebox{
+    display:block;
+    align-items: baseline;
+    justify-content: flex-start;
+    width:60vw;
+    height:100vh;
+}
+
+.messagelist{
+    display:block;
+    align-items:flex-start;
+    justify-content: center;
+    width:25vw;
+    height: 100vh;
+}
+
+.messagereceive, .messagesend{
+    width: 30vw;
+    height:auto;
+    padding-left: 10px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 10px 10px 5px lightgray;
+    margin:10px;
+}
+
+
+.messageheader{
+    width: auto;
+    height: 8vh;
+    display: flex;
+    padding:5px;
+    background-color: #c9cef7;
+    border-right: 1px solid black;
+}
+
+#headpic{
+    border-radius: 50%; 
+}
+
+.messagelistheader{
+    background-color:#c9cef7;
+    height:8vh;
+}
+
+.messagelistchild{
+    height:10vh;
+    width:100%;
+    display: flex;
+    cursor: pointer;
+    background-color: white;
+}
+.messagelistchild:hover{
+    background-color: #e1e4fb;
+}
+
+.messagesendtype{
+    margin-top: 53vh;
+}
+
+.input{
+    width:50vw;
+    height: 10vh;
+    font-size: large;
+    padding: 10px;
+    border:none;
+}
+.send{
+    width: 9vw;
+    height: 10vh;
+    border:none;
+    cursor: pointer;
+    background-color: rgb(162, 181, 250);
+}
+
+.date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
