@@ -11,8 +11,8 @@
 .mainexplore {
     margin-left: 15vw;
     display: flex;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .daj{
     display: flex;

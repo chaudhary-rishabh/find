@@ -4,7 +4,7 @@ import '../Style/explore.css'
 import profileimg from '../images/profileimg.jpg'
 import profileimgt from '../images/Rugby.png'
 import Items from './Items'
-import Carousel  from 'react-elastic-carousel'
+// import Carousel  from 'react-elastic-carousel'
 import { templateSettings } from 'lodash'
 
 const breakPoints = [
@@ -32,7 +32,7 @@ const Explore = () => {
     <div>
       <div className='navdiv'><Navbar/></div>
       <div className='mainexplore'>
-        <Carousel breakPoints={breakPoints}>
+        {/* <Carousel breakPoints={breakPoints}> */}
           {/* {explorePosts.map((posts) => {
             return <Slideshow key={posts.id} name={posts.name} time={posts.time} post={posts.post} sport={posts.sport} />
           })} */}
@@ -40,7 +40,7 @@ const Explore = () => {
           <Slideshow time={uploadDate} sport="Chess"/>
           <Slideshow time={uploadDate} sport="Chess"/>
           <Slideshow time={ uploadDate  } sport="Chess"/>
-        </Carousel>
+        {/* </Carousel> */}
       </div>
     </div>
   )
