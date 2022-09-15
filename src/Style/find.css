@@ -78,4 +78,5 @@
 .search{
     width: 15vw;
     font-size: 0.5em;
+    outline: none;
 }

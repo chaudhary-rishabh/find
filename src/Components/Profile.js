@@ -3,12 +3,22 @@ import "../Style/Profile.css";
 import profileimg from '../images/profileimg.jpg'
 import suggestprofile from '../images/suggestprofile.jpg'
 import Navbar from './Navbar';
+import profilepic from '../images/profilepic.png'
+import postimg from '../images/postimg.jpg'
+
+import exploredpone from '../images/exploredpone.png'
+import exploredptwo from '../images/exploredptwo.png'
+import exploredpthree from '../images/exploredpthree.png'
+import exploredpfour from '../images/exploredpfour.png'
+import exploredpfive from '../images/exploredpfive.png'
+import exploredpsix from '../images/exploredpsix.png'
+import exploredpseven from '../images/exploredpseven.png'
 
 const Profile = () => {
     var SuggestionArray = [
         {
             id: 1,
-            pic: {suggestprofile},
+            pic: suggestprofile,
             username: 'Rishabh',
             rank: 22,
             followers: 110,
@@ -16,7 +26,7 @@ const Profile = () => {
         },
         {
             id: 2,
-            pic: {suggestprofile},
+            pic: profileimg,
             username: 'Rohan',
             rank: 22,
             followers: 1910,
@@ -24,7 +34,7 @@ const Profile = () => {
         },
         {
             id: 3,
-            pic: {profileimg},
+            pic: exploredptwo,
             username: 'Ritika',
             rank: 22,
             followers: 1170,
@@ -32,7 +42,7 @@ const Profile = () => {
         },
         {
             id: 4,
-            pic: {profileimg},
+            pic: exploredpfive,
             username: 'Vivek',
             rank: 22,
             followers: 810,
@@ -40,23 +50,23 @@ const Profile = () => {
         },
         {
             id: 5,
-            pic: {profileimg},
-            username: 'Riya',
+            pic: exploredpfour,
+            username: 'Ritik',
             rank: 22,
             followers: 8610,
             friends: 260,
         },
         {
             id: 6,
-            pic: {profileimg},
-            username: 'Ritik',
+            pic: exploredpseven,
+            username: 'Divanshi',
             rank: 22,
             followers: 110,
             friends: 420,
         },
         {
             id: 7,
-            pic: {profileimg},
+            pic: exploredpfive,
             username: 'Sumit',
             rank: 22,
             followers: 110,
@@ -64,7 +74,7 @@ const Profile = () => {
         },
         {
             id: 8,
-            pic: {profileimg},
+            pic: exploredpthree,
             username: 'Varun',
             rank: 22,
             followers: 120,
@@ -72,24 +82,24 @@ const Profile = () => {
         },
         {
             id: 9,
-            pic: {profileimg},
-            username: 'Arijeet',
+            pic: exploredpsix,
+            username: 'Diana',
             rank: 22,
             followers: 320,
             friends: 1230,
         },
         {
             id: 10,
-            pic: {profileimg},
-            username: 'Naman',
+            pic: exploredpthree,
+            username: 'Aijeet',
             rank: 22,
             followers: 140,
             friends: 1203,
         },
         {
             id: 11,
-            pic: {profileimg},
-            username: 'Sundar',
+            pic: exploredpsix,
+            username: 'Sunzia',
             rank: 22,
             followers: 120,
             friends: 120,
@@ -121,7 +131,7 @@ const Profile = () => {
             </div>
             <div style={{ clear: 'both', marginLeft: '15vw'}}>
                 <div className='daj'>
-                    <Dp profileimg={profileimg}></Dp>
+                    <Dp profileimg={profilepic}></Dp>
                     {/* <Boxes item={rank} /> */}
                 </div>
                         
@@ -138,17 +148,15 @@ const Profile = () => {
                         return <Suggest SuggestList={SuggestList} following={following} setFollowing={setFollowing} friend={friend} setFriend={setFriend} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
                     })}
                 </div>
-                <div className='dajt'>
+                <div className='dajt activity'>
                     <Activity/>
                     <Activity/>
                     <Activity/>
-                </div>
-                <div className='dajt'>
                     <Activity/>
                     <Activity/>
                     <Activity/>
-                </div>
-                <div className='dajt'>
+                    <Activity/>
+                    <Activity/>
                     <Activity/>
                     <Activity/>
                     <Activity/>
@@ -216,7 +224,7 @@ const Suggest = (props) => {
         <div className='suggestbox'>
             <div className='daj'>
                 <div className='dajf'>
-                    <img className='profileradius' height={'80px'} width={'80px'} src={profileimg} alt="profileimg" />
+                    <img className='profileradius' height={'80px'} width={'80px'} src={props.profileimg} alt="profileimg" />
                     <h3>{props.username}</h3>
                 </div>
                 <div className='dajf'>
@@ -237,7 +245,7 @@ const Suggest = (props) => {
 const Activity = () => {
     return (
         
-            <img className='activitybox' height={'400px'} width={'420px'} src={suggestprofile} alt='suggestprofile'/>
+            <img className='activitybox' height={'400px'} width={'410px'} src={postimg} alt='suggestprofile'/>
         
     )
 }

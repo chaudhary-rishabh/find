@@ -37,7 +37,9 @@ body{
     align-items: center;
     margin: 5px;
 }
-
+.activity{
+    flex-wrap: wrap;
+}
 .dajth{
     display: flex;
     justify-content: space-evenly;
@@ -64,7 +66,7 @@ body{
     box-shadow: 10px 10px 10px #e1e4fb;
     background-color: white;
     color:rgb(102, 122, 255);
-    margin:5px;
+    margin:2px;
 }
 
 .activitybox:hover{
