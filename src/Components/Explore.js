@@ -42,7 +42,7 @@ const Slideshow = (props) => {
   return (
     <div className='postContainer'>
       {props.key}
-      <div className='back'>
+      <div  style={{color:'white'}} className='back'>
         <img className='profileRadius' src={props.post} height={'80px'} width={'80px'} alt="exploreimg" />
         <div>
           <h3>{props.name}</h3>

@@ -125,7 +125,7 @@ const FindHeader = () => {
   }
   return (
     <div className='heading' style={{marginLeft:'10px'}}>
-      Sportsalize with new friends
+      <p style={{fontSize:"2rem"}}>Sportsalize with new friends</p>
       <form onSubmit={handleSubmit}>
         <label style={{ color: 'black',marginRight:'5px', fontSize:'0.7em' }} htmlFor='ssearch'>Search:</label>
         <input onChange={handleSearch} type='search' value={search} id='ssearch' placeholder='enter name of sport/people' className='search' />

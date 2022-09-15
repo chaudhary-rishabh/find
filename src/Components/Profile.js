@@ -135,7 +135,7 @@ const Profile = () => {
                     {/* <Boxes item={rank} /> */}
                 </div>
                         
-                <div className='daj'>
+                <div className='daj wrap'>
                     <Boxes itemname={'Followers'} item={followers} />
                     <Boxes itemname={'Following'} item={following} />
                     <Boxes itemname={'Friends'} item={friend} />

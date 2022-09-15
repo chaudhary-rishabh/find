@@ -53,14 +53,16 @@ body{
     align-items: center;
     margin: 5px;
 }
-
+.wrap{
+    flex-wrap: wrap;
+}
 .suggest{
     width:auto;
     overflow: auto; 
     height:30vh;
 }
 
-.suggestbox, .activitybox{
+.suggestbox{
     min-width:auto;
     height:auto;
     box-shadow: 10px 10px 10px #e1e4fb;
@@ -69,6 +71,14 @@ body{
     margin:2px;
 }
 
+.activitybox {
+    width: 20rem;
+    height: auto;
+    box-shadow: 10px 10px 10px #e1e4fb;
+    background-color: white;
+    color: rgb(102, 122, 255);
+    margin: 15px;
+}
 .activitybox:hover{
     box-shadow: 10px 10px 10px black;
     cursor: pointer;
