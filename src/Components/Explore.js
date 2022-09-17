@@ -9,50 +9,91 @@ import exploredpfour from '../images/exploredpfour.png'
 import exploredpfive from '../images/exploredpfive.png'
 import exploredpsix from '../images/exploredpsix.png'
 import exploredpseven from '../images/exploredpseven.png'
+import cycling from '../images/cycling.jpg'
+import cycling2 from '../images/cycling2.jpg'
+import judo from '../images/judo.jpg'
+import boxing from '../images/boxing.jpg'
+import football from '../images/football.jpg'
+import badminton from '../images/badminton.jpg'
+import basketball from '../images/basketball.jpg'
+import travelling from '../images/travelling.jpg'
+import tennis from '../images/tennis.jpg'
+import football2 from '../images/football2.jpg'
+import surf from '../images/surf.jpg'
+import swimming from '../images/swimming.jpg'
+import vollyball from '../images/vollyball.jpg'
 
 const Explore = () => {
   const d = new Date();
   var uploadDate = d.toDateString();
   var explorePosts = [
-    { id:1, post: exploredpone, time:{uploadDate}, name:'Suzan', sport:'Chess'},
-    { id:2, post: exploredptwo, time:{uploadDate}, name:'Princia', sport:'Cricket'},
-    { id:3, post:  exploredpthree , time:{uploadDate}, name:'Om', sport:'Football'},
-    { id:4, post:  exploredpfour , time:{uploadDate}, name:'Arijeet', sport:'Tracking'},
-    { id:5, post:  exploredpfive , time:{uploadDate}, name:'Jiona', sport:'Biker'},
-    { id:6, post:  exploredpsix , time:{uploadDate}, name:'Diana', sport:'Cricket'},
-    { id:7, post:  exploredpseven , time:{uploadDate}, name:'Pooja', sport:'Running'},
-    { id:8, post:  exploredptwo , time:{uploadDate}, name:'Priana', sport:'Singing'},
-    { id:9, post:  exploredpone , time:{uploadDate}, name:'Raynia', sport:'Dancing'},
-    { id:10, post:  exploredpthree , time:{uploadDate}, name:'Varun', sport:'Gym'},
-    { id:11, post:  exploredpfive, time:{uploadDate}, name:'Rohit', sport:'Wrestling'}
+    { id:1, postHeadDp: exploredpone, time:{uploadDate}, name:'Suzan', sport:'Chess', post: cycling},
+    { id:2, postHeadDp: exploredptwo, time:{uploadDate}, name:'Princia', sport:'Cricket', post: tennis},
+    { id:3, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Om', sport:'Football', post: football},
+    { id:4, postHeadDp:  exploredpfour , time:{uploadDate}, name:'Arijeet', sport:'Tracking', post: basketball},
+    { id:5, postHeadDp:  exploredpfive , time:{uploadDate}, name:'Jiona', sport:'Biker', post: cycling2},
+    { id:6, postHeadDp:  exploredpsix , time:{uploadDate}, name:'Diana', sport:'Cricket', post: football2},
+    { id:7, postHeadDp:  exploredpseven , time:{uploadDate}, name:'Pooja', sport:'Running', post: travelling},
+    { id:8, postHeadDp:  exploredptwo , time:{uploadDate}, name:'Priana', sport:'Singing', post: swimming},
+    { id:9, postHeadDp:  exploredpone , time:{uploadDate}, name:'Raynia', sport:'Dancing', post: surf},
+    { id:10, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Varun', sport:'Gym', post: boxing},
+    { id:11, postHeadDp:  exploredpfive, time:{uploadDate}, name:'Rohit', sport:'Wrestling', post: vollyball}
   ]
   return (
     <div>
       <div className='navdiv'><Navbar/></div>
+        <ExploreHeader/>
       <div className='mainexplore'>
-          {explorePosts.map((posts) => {
-            return <Slideshow post={posts.post} key={posts.id} name={posts.name} time={uploadDate} sport={posts.sport} />
-          })}
+        {explorePosts.map((posts) => {
+          return <Slideshow postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} />
+        })}
       </div>
     </div>
   )
 }
 
 const Slideshow = (props) => {
+  var [likebtn, setLikebtn] = useState('🤍');
+  var [totalLikes, setTotalLikes] = useState(200);
+  function changeLikebtn() {
+    if (likebtn === '🤍') {
+      setLikebtn('💙');
+      setTotalLikes(totalLikes + 1);
+    } else {
+      setLikebtn('🤍');
+      setTotalLikes(totalLikes - 1);
+    }
+  };
+
   return (
     <div className='postContainer'>
       {props.key}
-      <div  style={{color:'white'}} className='back'>
-        <img className='profileRadius' src={props.post} height={'80px'} width={'80px'} alt="exploreimg" />
-        <div>
+      <div className='postHeader'>
+        <img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" />
+          <div>
           <h3>{props.name}</h3>
           <h3>{props.time}</h3>
           <h3>{props.sport}</h3>
         </div>
-          <h1 className='likebtn'>💙</h1>
+      </div>
+      <div className='back'>
+        <img src={props.post} alt='post' className='postimg'/>
+      </div>
+      <div className='postButton'>
+        <h2 onClick={changeLikebtn} style={{cursor:'pointer'}}> {likebtn} {totalLikes} </h2>
+        {/* <h2> 💙 </h2> */}
+        <h2 style={{cursor:'pointer'}}> 🗨️ </h2>
+        <h2 style={{cursor:'pointer'}}> ➦ </h2>
       </div>
     </div>    
   );
 };
 
+const ExploreHeader = () => {
+  return (
+    <div className='exploreHeader'>
+      <p id='header'>Sportzalize</p>
+    </div>
+  )
+};
 export default Explore
