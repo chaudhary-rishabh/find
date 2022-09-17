@@ -9,35 +9,33 @@ import exploredpfour from '../images/exploredpfour.png'
 import exploredpfive from '../images/exploredpfive.png'
 import exploredpsix from '../images/exploredpsix.png'
 import exploredpseven from '../images/exploredpseven.png'
-import cycling from '../images/cycling.jpg'
 import cycling2 from '../images/cycling2.jpg'
 import judo from '../images/judo.jpg'
 import boxing from '../images/boxing.jpg'
 import football from '../images/football.jpg'
-import badminton from '../images/badminton.jpg'
-import basketball from '../images/basketball.jpg'
 import travelling from '../images/travelling.jpg'
-import tennis from '../images/tennis.jpg'
-import football2 from '../images/football2.jpg'
 import surf from '../images/surf.jpg'
 import swimming from '../images/swimming.jpg'
 import vollyball from '../images/vollyball.jpg'
+import girlgym from '../images/gymgirl.jpg'
+import swimming3 from '../images/swimming3.jpg'
+import icehockey from '../images/icehockey.jpg'
 
 const Explore = () => {
   const d = new Date();
   var uploadDate = d.toDateString();
   var explorePosts = [
-    { id:1, postHeadDp: exploredpone, time:{uploadDate}, name:'Suzan', sport:'Chess', post: cycling},
-    { id:2, postHeadDp: exploredptwo, time:{uploadDate}, name:'Princia', sport:'Cricket', post: tennis},
-    { id:3, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Om', sport:'Football', post: football},
-    { id:4, postHeadDp:  exploredpfour , time:{uploadDate}, name:'Arijeet', sport:'Tracking', post: basketball},
+    { id:1, postHeadDp: exploredpone, time:{uploadDate}, name:'Suzan', sport:'Chess', post: swimming},
+    { id:2, postHeadDp: exploredptwo, time:{uploadDate}, name:'Princia', sport:'Cricket', post: vollyball},
+    { id:3, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Om', sport:'Football', post: swimming3},
+    { id:4, postHeadDp:  exploredpfour , time:{uploadDate}, name:'Arijeet', sport:'Tracking', post: travelling},
     { id:5, postHeadDp:  exploredpfive , time:{uploadDate}, name:'Jiona', sport:'Biker', post: cycling2},
-    { id:6, postHeadDp:  exploredpsix , time:{uploadDate}, name:'Diana', sport:'Cricket', post: football2},
-    { id:7, postHeadDp:  exploredpseven , time:{uploadDate}, name:'Pooja', sport:'Running', post: travelling},
-    { id:8, postHeadDp:  exploredptwo , time:{uploadDate}, name:'Priana', sport:'Singing', post: swimming},
+    { id:6, postHeadDp:  exploredpsix , time:{uploadDate}, name:'Diana', sport:'Cricket', post: girlgym},
+    { id:7, postHeadDp:  exploredpseven , time:{uploadDate}, name:'Pooja', sport:'Running', post: judo},
+    { id:8, postHeadDp:  exploredptwo , time:{uploadDate}, name:'Priana', sport:'Singing', post: football},
     { id:9, postHeadDp:  exploredpone , time:{uploadDate}, name:'Raynia', sport:'Dancing', post: surf},
     { id:10, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Varun', sport:'Gym', post: boxing},
-    { id:11, postHeadDp:  exploredpfive, time:{uploadDate}, name:'Rohit', sport:'Wrestling', post: vollyball}
+    { id:11, postHeadDp:  exploredpfive, time:{uploadDate}, name:'Rohit', sport:'Wrestling', post: icehockey}
   ]
   return (
     <div>
