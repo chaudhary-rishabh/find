@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/find/static/css/main.7182e375.css",
-    "main.js": "/find/static/js/main.f579dbc7.js",
-    "static/media/cycling.jpg": "/find/static/media/cycling.e5265c08b046059fa0fa.jpg",
+    "main.css": "/find/static/css/main.a5106144.css",
+    "main.js": "/find/static/js/main.eb9a53fc.js",
+    "static/media/gymgirl.jpg": "/find/static/media/gymgirl.294435737a01e6dc51dd.jpg",
     "static/media/suggestprofile.jpg": "/find/static/media/suggestprofile.2fe57521835b4acdf4d8.jpg",
-    "static/media/badminton.jpg": "/find/static/media/badminton.0a9e37249ebba5e83198.jpg",
     "static/media/swimming.jpg": "/find/static/media/swimming.493433cfe8fa8547f75b.jpg",
-    "static/media/basketball.jpg": "/find/static/media/basketball.1000adf229a7c232971b.jpg",
-    "static/media/tennis.jpg": "/find/static/media/tennis.d93ce7053b102e8fe60a.jpg",
+    "static/media/swimming3.jpg": "/find/static/media/swimming3.8022effa8a6fa1b5ee7d.jpg",
     "static/media/judo.jpg": "/find/static/media/judo.91e4e1cc61cf9ad0cfed.jpg",
     "static/media/vollyball.jpg": "/find/static/media/vollyball.46af15b455d9f1b6aa85.jpg",
-    "static/media/football2.jpg": "/find/static/media/football2.709a2182d0c534df2114.jpg",
+    "static/media/icehockey.jpg": "/find/static/media/icehockey.edd5be46044f288e2ee0.jpg",
     "static/media/boxing.jpg": "/find/static/media/boxing.f947280354cbf551b3c4.jpg",
     "static/media/surf.jpg": "/find/static/media/surf.8ba147334a6a02928a25.jpg",
     "static/media/travelling.jpg": "/find/static/media/travelling.696538856a6d7a5ad2a1.jpg",
@@ -27,11 +25,11 @@
     "static/media/profileimg.jpg": "/find/static/media/profileimg.9a96c351aa27d1793aba.jpg",
     "static/media/exploredptwo.png": "/find/static/media/exploredptwo.ead55339564f324aa0f9.png",
     "index.html": "/find/index.html",
-    "main.7182e375.css.map": "/find/static/css/main.7182e375.css.map",
-    "main.f579dbc7.js.map": "/find/static/js/main.f579dbc7.js.map"
+    "main.a5106144.css.map": "/find/static/css/main.a5106144.css.map",
+    "main.eb9a53fc.js.map": "/find/static/js/main.eb9a53fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.7182e375.css",
-    "static/js/main.f579dbc7.js"
+    "static/css/main.a5106144.css",
+    "static/js/main.eb9a53fc.js"
   ]
 }
