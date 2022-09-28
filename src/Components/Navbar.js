@@ -7,16 +7,16 @@ const Navbar = () => {
     return (
         <div className='maindiv'>
             <Link id='nodecoration' to='/profile'><Boxes item={"Profile"}><ProfileDp /></Boxes></Link>
-            <Link id='nodecoration' to='/find'><Boxes item={"Find"}/></Link>
-            <Link id='nodecoration' to='/'><Boxes item={"Explore"}/></Link>
-            <Link id='nodecoration' to='/message'><Boxes item={"Message"}/></Link>
-            <Boxes item={"Settings"} />
-            <div style={{marginTop:'40vh'}}>
+            <Link id='nodecoration' to='/find'><Boxes item={"Find"} /></Link>
+            <Link id='nodecoration' to='/'><Boxes item={"Explore"} /></Link>
+            <Link id='nodecoration' to='/message'><Boxes item={"Message"} /></Link>
+            <Link id='nodecoration' to='/location'><Boxes item={"Location"} /></Link>
+            <div style={{ marginTop: '40vh' }}>
                 <Boxes item={"Logout"} />
             </div>
         </div>
     )
-}
+};
 
 const Boxes = ({item, children}) => {
     return (

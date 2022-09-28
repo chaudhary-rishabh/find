@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import '../Style/find.css';
+import Map from './Map'
 import archery from '../images/Archery.png'; 
 import swimming from '../images/Swimming.png'; 
 import athletics from '../images/Athletics.png'; 
@@ -134,4 +135,5 @@ const FindHeader = () => {
     </div>
   )
 }
+
 export default Find

@@ -83,6 +83,7 @@
     font-size: large;
     padding: 10px;
     border:none;
+    outline: none;
 }
 .send{
     width: 9vw;

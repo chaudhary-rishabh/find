@@ -14,6 +14,7 @@ import exploredpfive from '../images/exploredpfive.png'
 import exploredpsix from '../images/exploredpsix.png'
 import exploredpseven from '../images/exploredpseven.png'
 
+
 const Profile = () => {
     var SuggestionArray = [
         {
@@ -129,7 +130,7 @@ const Profile = () => {
             <div className='navclass'>
                 <Navbar/>
             </div>
-            <div style={{ clear: 'both', marginLeft: '15vw'}}>
+            <div className='profileMain'>
                 <div className='daj'>
                     <Dp profileimg={profilepic}></Dp>
                     {/* <Boxes item={rank} /> */}
@@ -245,8 +246,8 @@ const Suggest = (props) => {
 const Activity = () => {
     return (
         
-            <img className='activitybox' height={'400px'} width={'410px'} src={postimg} alt='suggestprofile'/>
+        <img className='activitybox' height={'400px'} width={'410px'} src={postimg} alt='suggestprofile' />
         
     )
-}
+};
 export default Profile

@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
+import { Link } from 'react-router-dom'
+import { RWebShare } from "react-web-share"; //share api
 import '../Style/explore.css'
 
 import exploredpone from '../images/exploredpone.png'
@@ -21,38 +23,63 @@ import girlgym from '../images/gymgirl.jpg'
 import swimming3 from '../images/swimming3.jpg'
 import icehockey from '../images/icehockey.jpg'
 
+import hamburger from '../images/hamburger.png'
+
+import nba from  '../videos/nba.mp4'
+
 const Explore = () => {
   const d = new Date();
   var uploadDate = d.toDateString();
-  var explorePosts = [
-    { id:1, postHeadDp: exploredpone, time:{uploadDate}, name:'Suzan', sport:'Chess', post: swimming},
-    { id:2, postHeadDp: exploredptwo, time:{uploadDate}, name:'Princia', sport:'Cricket', post: vollyball},
-    { id:3, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Om', sport:'Football', post: swimming3},
-    { id:4, postHeadDp:  exploredpfour , time:{uploadDate}, name:'Arijeet', sport:'Tracking', post: travelling},
-    { id:5, postHeadDp:  exploredpfive , time:{uploadDate}, name:'Jiona', sport:'Biker', post: cycling2},
-    { id:6, postHeadDp:  exploredpsix , time:{uploadDate}, name:'Diana', sport:'Cricket', post: girlgym},
-    { id:7, postHeadDp:  exploredpseven , time:{uploadDate}, name:'Pooja', sport:'Running', post: judo},
-    { id:8, postHeadDp:  exploredptwo , time:{uploadDate}, name:'Priana', sport:'Singing', post: football},
-    { id:9, postHeadDp:  exploredpone , time:{uploadDate}, name:'Raynia', sport:'Dancing', post: surf},
-    { id:10, postHeadDp:  exploredpthree , time:{uploadDate}, name:'Varun', sport:'Gym', post: boxing},
-    { id:11, postHeadDp:  exploredpfive, time:{uploadDate}, name:'Rohit', sport:'Wrestling', post: icehockey}
-  ]
+  var [explorePosts, setExplorePosts] = useState([
+    { id: 1, postHeadDp: exploredpone, time: { uploadDate }, name: 'Suzan', sport: 'Chess', post: swimming, likes: 341 },
+    { id: 2, postHeadDp: exploredptwo, time: { uploadDate }, name: 'Princia', sport: 'Cricket', post: vollyball, likes: 232 },
+    { id: 3, postHeadDp: exploredpthree, time: { uploadDate }, name: 'Om', sport: 'Football', post: swimming3, likes: 500 },
+    { id: 4, postHeadDp: exploredpfour, time: { uploadDate }, name: 'Arijeet', sport: 'Tracking', post: travelling, likes: 989 },
+    { id: 5, postHeadDp: exploredpfive, time: { uploadDate }, name: 'Jiona', sport: 'Biker', post: cycling2, likes: 133 },
+    { id: 6, postHeadDp: exploredpsix, time: { uploadDate }, name: 'Diana', sport: 'Cricket', post: girlgym, likes: 598 },
+    { id: 7, postHeadDp: exploredpseven, time: { uploadDate }, name: 'Pooja', sport: 'Running', post: judo, likes: 570 },
+    { id: 8, postHeadDp: exploredptwo, time: { uploadDate }, name: 'Priana', sport: 'Singing', post: football, likes: 930 },
+    { id: 9, postHeadDp: exploredpone, time: { uploadDate }, name: 'Raynia', sport: 'Dancing', post: surf, likes: 200 },
+    { id: 10, postHeadDp: exploredpthree, time: { uploadDate }, name: 'Varun', sport: 'Gym', post: boxing, likes: 140 },
+    { id: 11, postHeadDp: exploredpfive, time: { uploadDate }, name: 'Rohit', sport: 'Wrestling', post: icehockey, likes: 724 }
+  ]);
+
+    // for comments render onclick
+  var [showComment, setShowComment] = useState(false);
+  const renderComment = () => {
+    setShowComment(current => !current);
+  };
+ 
+
   return (
     <div>
-      <div className='navdiv'><Navbar/></div>
-        <ExploreHeader/>
+      <img src={hamburger} alt='hamburger' className='navslide' />
+      <div className='navdiv'><Navbar /></div>
+      <ExploreHeader />
+        {explorePosts.map((cmt) => {
+          return (
+            <div style={{ float: 'right', clear: 'both' }}>
+              { showComment && <Comments />}
+            </div>
+          )
+        })}
       <div className='mainexplore'>
         {explorePosts.map((posts) => {
-          return <Slideshow postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} />
+          return (
+            <Slideshow postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} renderComment={renderComment} />
+          )
         })}
+        
       </div>
     </div>
   )
-}
+};
 
-const Slideshow = (props) => {
+export const Slideshow = (props) => {
+    //post likes button and total likes
   var [likebtn, setLikebtn] = useState('🤍');
-  var [totalLikes, setTotalLikes] = useState(200);
+
+  var [totalLikes, setTotalLikes] = useState(734);
   function changeLikebtn() {
     if (likebtn === '🤍') {
       setLikebtn('💙');
@@ -67,7 +94,7 @@ const Slideshow = (props) => {
     <div className='postContainer'>
       {props.key}
       <div className='postHeader'>
-        <img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" />
+        <Link to='/profile'><img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" /></Link>
           <div>
           <h3>{props.name}</h3>
           <h3>{props.time}</h3>
@@ -76,22 +103,75 @@ const Slideshow = (props) => {
       </div>
       <div className='back'>
         <img src={props.post} alt='post' className='postimg'/>
+        {/* <video className='postimg' controls>
+          <source src={nba} type="video/mp4" />
+        </video> */}
       </div>
       <div className='postButton'>
         <h2 onClick={changeLikebtn} style={{cursor:'pointer'}}> {likebtn} {totalLikes} </h2>
-        {/* <h2> 💙 </h2> */}
-        <h2 style={{cursor:'pointer'}}> 🗨️ </h2>
-        <h2 style={{cursor:'pointer'}}> ➦ </h2>
+        <h2 onClick={props.renderComment} style={{ cursor: 'pointer' }}> 🗨️ </h2>
+        
+        {/* web share api */}
+        <RWebShare
+          data={{
+            title: "Sportsalize",
+            url: "https://soulgiannis.github.io/find",
+            text: `Profile of ${props.name}`,
+          }}>
+          <h2 style={{cursor:'pointer'}}> ➦ </h2>
+        </RWebShare>
       </div>
     </div>    
   );
 };
 
-const ExploreHeader = () => {
+const ExploreHeader = (props) => {
   return (
     <div className='exploreHeader'>
       <p id='header'>Sportzalize</p>
+      <p>{props.arrayTest}</p>
     </div>
   )
 };
-export default Explore
+
+const Comments = (props) => {
+
+    // for adding Comments
+  var [comment, setComment] = useState(['']);
+  var [comments, setComments] = useState('');
+
+  var handleInput = (e) => {
+    setComments(e.target.value);
+  };
+  var handleSubmit = (e) => {
+    e.preventDefault();
+    setComment(comments,...comment);
+  }
+  var [commentValue, setCommentValue] = useState([
+    {
+      posts: {
+        postone: { name: exploredpfive, comment: 'Nice pic'},
+        postTwo: { name: exploredpthree, comment: 'Keep it up'},
+        postThree: { name: exploredpthree, comment: 'Champion'},
+        postFour: { name: exploredpthree, comment: 'Amazing'},
+        postFive: { name: exploredpthree, comment: '💛❣'}
+      }
+    }
+  ]); 
+  return (
+    <div className='comments'>
+      <h2>Comments</h2>
+      <div className='commentsInner'>
+        <div className='commentbox'>
+          <p>{comment}</p>
+        </div>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input type='text' onChange={handleInput} placeholder='comment something' className='commentsInput' />
+        <button type='submit' className='commentsSubmit' value=''>⬆️</button>
+      </form>
+    </div>
+  )
+};
+
+export default Explore 
