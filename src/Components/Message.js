@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import Navbar from './Navbar'
 import '../Style/message.css';
 import headpic from '../images/profileimg.jpg'; 
+import hamburger from '../images/hamburger.png'
+import { ExploreHeader } from './Explore';
 
 const Message = () => {
   return (
     <div>
+      <img src={hamburger} alt='hamburger' className='navslide' />
       <div className='navdiv'><Navbar /></div>
+      <ExploreHeader/>
       <div className='mainmessage'>
         <MessageBox />
         <MessageList />

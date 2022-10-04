@@ -11,6 +11,7 @@
 
 .mainmessage{
     margin-left: 15vw;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;

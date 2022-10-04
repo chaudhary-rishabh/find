@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { RWebShare } from "react-web-share"; //share api
 import '../Style/explore.css'
-
+// import '../Style/common.css'
 import exploredpone from '../images/exploredpone.png'
 import exploredptwo from '../images/exploredptwo.png'
 import exploredpthree from '../images/exploredpthree.png'
@@ -63,7 +63,7 @@ const Explore = () => {
             </div>
           )
         })}
-      <div className='mainexplore'>
+      <div className='mainexplore' style={{marginLeft:'20vw'}}>
         {explorePosts.map((posts) => {
           return (
             <Slideshow postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} renderComment={renderComment} />
@@ -125,14 +125,14 @@ export const Slideshow = (props) => {
   );
 };
 
-const ExploreHeader = (props) => {
+export const ExploreHeader = (props) => {
   return (
-    <div className='exploreHeader'>
-      <p id='header'>Sportzalize</p>
-      <p>{props.arrayTest}</p>
-    </div>
+      <div className='exploreHeader'>
+        <p id='header'>Sportzalize</p>
+      </div>
   )
 };
+
 
 const Comments = (props) => {
 

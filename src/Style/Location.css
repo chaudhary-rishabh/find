@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navdiv {
+    float: left;
+    position: fixed;
+}
+
+.mainlocation{
+    margin-left: 15vw;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}

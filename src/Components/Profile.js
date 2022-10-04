@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import "../Style/Profile.css";
+import "../Style/common.css";
+import { ExploreHeader } from './Explore';
+
 import profileimg from '../images/profileimg.jpg'
 import suggestprofile from '../images/suggestprofile.jpg'
 import Navbar from './Navbar';
 import profilepic from '../images/profilepic.png'
 import postimg from '../images/postimg.jpg'
+import hamburger from '../images/hamburger.png'
 
 import exploredpone from '../images/exploredpone.png'
 import exploredptwo from '../images/exploredptwo.png'
@@ -23,7 +27,7 @@ const Profile = () => {
             username: 'Rishabh',
             rank: 22,
             followers: 110,
-            friends: 220,            
+            friends: 220,
         },
         {
             id: 2,
@@ -127,9 +131,11 @@ const Profile = () => {
 
     return (
         <div>
+            <img src={hamburger} alt='hamburger' className='navslide' />
             <div className='navclass'>
-                <Navbar/>
+                <Navbar />
             </div>
+            <ExploreHeader/>
             <div className='profileMain'>
                 <div className='daj'>
                     <Dp profileimg={profilepic}></Dp>
@@ -143,35 +149,35 @@ const Profile = () => {
                 </div>
 
                 <Boxes item={bio} />
-                <h2 style={{cursor:'pointer'}} onClick={closesuggests}>{suggest}</h2>
+                <h2 style={{ cursor: 'pointer' }} onClick={closesuggests}>{suggest}</h2>
                 <div className='suggest dajt'>
                     {SuggestList.map((users) => {
                         return <Suggest SuggestList={SuggestList} following={following} setFollowing={setFollowing} friend={friend} setFriend={setFriend} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
                     })}
                 </div>
                 <div className='dajt activity'>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
-                    <Activity/>
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
+                    <Activity />
                 </div>
             </div>
         </div>
     )
-}
+};
 
 const Dp = (props) => {
     return (
-        <img className='dp' width={'150px'} height={'150px'} src={props.profileimg} alt='profileimg'/>
+        <img className='dp' width={'150px'} height={'150px'} src={props.profileimg} alt='profileimg' />
     )
-}
+};
 
 const Boxes = (props) => {
     return (
@@ -189,7 +195,7 @@ const Suggest = (props) => {
 
     useEffect(() => {
         console.log('clicked');
-        })
+    })
     const closesuggest = () => {
         
         // const index = props.SuggestList.indexOf(props.SuggestList.name);// use useEffect
@@ -202,7 +208,7 @@ const Suggest = (props) => {
     }
         
     
-    const changeFollow = () =>{
+    const changeFollow = () => {
         if (follow === 'Follow') {
             setFollow('Following');
             props.setFollowing(props.following + 1);
@@ -213,14 +219,14 @@ const Suggest = (props) => {
     }
 
     const changeAdd = () => {
-            if (add === 'Add') {
-                setAdd('Friends');
-                props.setFriend(props.friend + 1);
-            } else {
-                setAdd('Add');
-                props.setFriend(props.friend - 1);
-            }
-    }    
+        if (add === 'Add') {
+            setAdd('Friends');
+            props.setFriend(props.friend + 1);
+        } else {
+            setAdd('Add');
+            props.setFriend(props.friend - 1);
+        }
+    }
     return (
         <div className='suggestbox'>
             <div className='daj'>
@@ -241,7 +247,7 @@ const Suggest = (props) => {
             </div>
         </div>
     )
-}
+};
 
 const Activity = () => {
     return (
@@ -250,4 +256,5 @@ const Activity = () => {
         
     )
 };
+
 export default Profile
