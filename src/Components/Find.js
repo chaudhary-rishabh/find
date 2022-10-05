@@ -33,7 +33,7 @@ const Find = () => {
         <FindHeader />
           <h2 className='findtitle'>Sportsalize with people</h2>
         <div style={{ padding: '0px', margin: '0px', marginTop: '1%'}} className='dajt'>
-          <img width={'26%'} height={'20%'} src={manfinding} alt='findman' />
+          <img width={'26%'} height={'15%'} src={manfinding} alt='findman' />
           <div className='backgroundfind'>
             <h2 style={{ color: 'rgb(56, 80, 234)', textAlign:'center', margin  :'1%'}}>Getting board! Working alone! Stressed out! </h2>
             <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Play with people of same interest </h1>
