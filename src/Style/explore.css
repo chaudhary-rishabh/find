@@ -100,12 +100,15 @@ body{
     height: 80%;
 }
 .commentbox{
+    display: flex;
     border-radius: 10px;
     background-color: white;
     color: rgb(102, 122, 255);
     font-weight: 400;
     font-size: large;
-    width: 70%;
+    margin:1em;
+    overflow-wrap: break-word;
+    width: 85%;
     /* padding: 5px; */
 }
 .commentsInput{
@@ -122,6 +125,15 @@ body{
     cursor: pointer;
     height: 20px;
 }
+
+/* image tag of comments display after first comment is added */
+.commentImg{
+    display:none;
+}
+.commentImgAfter{
+    display: block;
+}
+
 ::placeholder{
     color: rgb(102, 122, 255);
 }

@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { RWebShare } from "react-web-share"; //share api
 import '../Style/explore.css'
+import { v4 as uuidv4 } from "uuid";
+
 // import '../Style/common.css'
 import exploredpone from '../images/exploredpone.png'
 import exploredptwo from '../images/exploredptwo.png'
@@ -50,7 +52,6 @@ const Explore = () => {
     setShowComment(current => !current);
   };
  
-
   return (
     <div>
       <img src={hamburger} alt='hamburger' className='navslide' />
@@ -66,7 +67,7 @@ const Explore = () => {
       <div className='mainexplore' style={{marginLeft:'20vw'}}>
         {explorePosts.map((posts) => {
           return (
-            <Slideshow postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} renderComment={renderComment} />
+            <Slideshow profileImg={posts.postHeadDp} postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} renderComment={renderComment} />
           )
         })}
         
@@ -94,7 +95,7 @@ export const Slideshow = (props) => {
     <div className='postContainer'>
       {props.key}
       <div className='postHeader'>
-        <Link to='/profile'><img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" /></Link>
+        <Link to='/profile' state={{image:props.profileImg}}><img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" /></Link>
           <div>
           <h3>{props.name}</h3>
           <h3>{props.time}</h3>
@@ -137,38 +138,58 @@ export const ExploreHeader = (props) => {
 const Comments = (props) => {
 
     // for adding Comments
-  var [comment, setComment] = useState(['']);
-  var [comments, setComments] = useState('');
+  var [comment, setComment] = useState([]);
+  var [input, setInput] = useState();
+  var [profileInput, setProfileInput] = useState();
 
   var handleInput = (e) => {
-    setComments(e.target.value);
+    setInput(e.target.value);
+    setProfileInput(exploredpseven);
   };
   var handleSubmit = (e) => {
     e.preventDefault();
-    setComment(comments,...comment);
+    setComment([...comment, {title:input, id:uuidv4(),profile: profileInput, close:'❌', completed: false}]);
   }
-  var [commentValue, setCommentValue] = useState([
-    {
-      posts: {
-        postone: { name: exploredpfive, comment: 'Nice pic'},
-        postTwo: { name: exploredpthree, comment: 'Keep it up'},
-        postThree: { name: exploredpthree, comment: 'Champion'},
-        postFour: { name: exploredpthree, comment: 'Amazing'},
-        postFive: { name: exploredpthree, comment: '💛❣'}
-      }
-    }
-  ]); 
+  // var [commentValue, setCommentValue] = useState([
+  //   {
+  //     posts: {
+  //       postone: {one:{ name: exploredpfive, comment: 'Nice pic' },two:{name:exploredpone, comment:'Great'}},
+  //       postTwo: { name: exploredpthree, comment: 'Keep it up'},
+  //       postThree: { name: exploredpthree, comment: 'Champion'},
+  //       postFour: { name: exploredpthree, comment: 'Amazing'},
+  //       postFive: { name: exploredpthree, comment: '💛❣'}
+  //     }
+  //   }
+  // ]);
+  
+//delete comment
+  const handleDelete = ({ id }) => {
+    return setComment(comment.filter((cmt) => cmt.id !== id))
+  };
+
+//display image tag after first comment is added
+  const firstCommentAdded = () => {
+    if (comment === '') {
+      return true;
+    } 
+  };
   return (
     <div className='comments'>
       <h2>Comments</h2>
       <div className='commentsInner'>
-        <div className='commentbox'>
-          <p>{comment}</p>
-        </div>
+        {comment.map((cmt) => {
+          return (
+            <div className='commentbox'>
+              <Link to="/profile" state={{image:cmt.profile}}><img style={{ cursor: 'pointer' }} src={cmt.profile} width={'45em'} height={'45em'} alt="profile img" /></Link>
+              <p>{cmt.title}</p>
+              <p style={{ cursor: 'pointer' }} onClick={() => handleDelete(cmt)}>{cmt.close}</p>
+            </div>
+          )
+        })}
       </div>
       <form onSubmit={handleSubmit}>
         <input type='text' onChange={handleInput} placeholder='comment something' className='commentsInput' />
-        <button type='submit' className='commentsSubmit' value=''>⬆️</button>
+        <button type='submit' className='commentsSubmit' value='  '>⬆️</button>
       </form>
     </div>
   )

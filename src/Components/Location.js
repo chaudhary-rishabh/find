@@ -24,10 +24,10 @@ const Location = () => {
       <div className='navdiv'><Navbar /></div>
       <ExploreHeader/>
       <div className='mainlocation'>
-        {/* <Map /> */}
+        <Map />
       </div>
 
-      <div style={{ marginTop: '60vh', marginLeft: '20vw' }}>
+      <div style={{ marginTop: '50vh', marginLeft: '20vw' }}>
         <h2>Search for people interested </h2>
         <div className='cards bajt'>
           <img className='mg' height='100px' width='100px' src={locationState.image} alt='archery' />

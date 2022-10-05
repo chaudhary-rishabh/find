@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "../Style/Profile.css";
 import "../Style/common.css";
 import { ExploreHeader } from './Explore';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import profileimg from '../images/profileimg.jpg'
 import suggestprofile from '../images/suggestprofile.jpg'
@@ -71,7 +73,7 @@ const Profile = () => {
         },
         {
             id: 7,
-            pic: exploredpfive,
+            pic: exploredpone,
             username: 'Sumit',
             rank: 22,
             followers: 110,
@@ -129,6 +131,17 @@ const Profile = () => {
         }
     }
 
+    //use location for getting data from one page to another
+    const location = useLocation();
+    const [locationState, setLocationState] = useState({image:'', followers: '', friends:'', rank:'', name:''});
+
+    useEffect(() => {
+        if (location.state) {
+            let _state = location.state;
+            setLocationState(_state);
+        }
+    }, [location]);
+
     return (
         <div>
             <img src={hamburger} alt='hamburger' className='navslide' />
@@ -138,21 +151,21 @@ const Profile = () => {
             <ExploreHeader/>
             <div className='profileMain'>
                 <div className='daj'>
-                    <Dp profileimg={profilepic}></Dp>
+                    <Dp  profileimg={locationState.image !== "" ? locationState.image : profilepic}></Dp>
                     {/* <Boxes item={rank} /> */}
                 </div>
                         
                 <div className='daj wrap'>
-                    <Boxes itemname={'Followers'} item={followers} />
-                    <Boxes itemname={'Following'} item={following} />
-                    <Boxes itemname={'Friends'} item={friend} />
+                    <Boxes itemname={'Followers'} item={locationState.followers !== '' ? locationState.followers: followers} />
+                    <Boxes itemname={'Following'} item={locationState.friends !== '' ? locationState.friends: friend} />
+                    <Boxes itemname={'Friends'} item={locationState.rank !== '' ? locationState.rank: rank} />
                 </div>
 
-                <Boxes item={bio} />
+                <Boxes itemname={'username'} item={locationState.name !== '' ? locationState.name: 'riyahnia' } />
                 <h2 style={{ cursor: 'pointer' }} onClick={closesuggests}>{suggest}</h2>
                 <div className='suggest dajt'>
                     {SuggestList.map((users) => {
-                        return <Suggest SuggestList={SuggestList} following={following} setFollowing={setFollowing} friend={friend} setFriend={setFriend} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
+                        return <Suggest SuggestList={SuggestList} following={locationState.followers} setFollowing={locationState.followers} friend={locationState.friends} setFriend={locationState.friends} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
                     })}
                 </div>
                 <div className='dajt activity'>
@@ -231,7 +244,7 @@ const Suggest = (props) => {
         <div className='suggestbox'>
             <div className='daj'>
                 <div className='dajf'>
-                    <img className='profileradius' height={'80px'} width={'80px'} src={props.profileimg} alt="profileimg" />
+                    <Link to="/profile" state={{ image: props.profileimg, followers:props.followers, rank:props.rank, friends:props.friends, name:props.username }}><img className='profileradius' height={'80px'} width={'80px'} src={props.profileimg} alt="profileimg" /></Link>
                     <h3>{props.username}</h3>
                 </div>
                 <div className='dajf'>

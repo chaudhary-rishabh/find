@@ -4,8 +4,6 @@ import '../Style/find.css';
 import '../Style/common.css';
 import { Link } from 'react-router-dom';
 
-
-
 import hamburger from '../images/hamburger.png'
 import { ExploreHeader } from './Explore';
 
@@ -34,6 +32,7 @@ export const FindHeader = () => {
     e.preventDefault();
     alert(`${search}`);
   };
+
   return (
     <div className='findhead'>
       <div className='heading' style={{ marginLeft: '10px' }}>
