@@ -17,6 +17,33 @@
     display: block;
 }
 
+.manhiding{
+    float: right;
+    /* margin-left: 50%; */
+}
+
+
+.backgroundfind{
+    background-image: url('../Image/tiredman.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 46vw;
+    height: 70vh;
+    color:rgb(56, 80, 235);
+    border-radius: 25px;
+}
+
+.findtitle{
+    color: rgb(56, 80, 235);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+    font-family: Script MT;
+    text-shadow: 1px 1px 3px white;
+    margin-top:2vh;
+    border-top: 5px double blue;
+}
+
 .indoorinner, .outdoorinner, .otherinner{
     display: flex;
     justify-content: left;
@@ -87,7 +114,6 @@
     text-align: center;
 }
 
-
 .mg:hover{
     cursor: pointer;
     box-shadow: 1px 1px 20px white;
@@ -113,4 +139,45 @@
 #nodecoration {
     text-decoration: none;
     color: white;
+}
+
+.footballanimation{
+    margin-left: 5%;
+    position: relative;
+    animation: football 2s infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes football{
+    from{top:0px;}
+    to{top:30px;}
+}
+.basketballanimation{
+    margin-left: 1em;
+    position: relative;
+    animation: basketball 3s infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes basketball{
+    from{top:0px;}
+    to{top:30px;}
+}
+.cricketanimation{
+    margin-left: 1em;
+    position: relative;
+    animation: cricket 3s infinite;
+    animation-timing-function:linear;
+}
+@keyframes cricket{
+    from{top:0px;}
+    to{top:30px;}
+}
+.tennisanimation{
+    margin-left: 1em;
+    position: relative;
+    animation: tennis 1s infinite;
+    animation-timing-function:linear;
+}
+@keyframes tennis{
+    from{top:0px;}
+    to{top:30px;}
 }

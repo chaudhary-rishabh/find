@@ -20,7 +20,6 @@ import exploredpfive from '../images/exploredpfive.png'
 import exploredpsix from '../images/exploredpsix.png'
 import exploredpseven from '../images/exploredpseven.png'
 
-
 const Profile = () => {
     var SuggestionArray = [
         {

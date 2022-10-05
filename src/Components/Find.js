@@ -7,6 +7,22 @@ import { Link } from 'react-router-dom';
 import hamburger from '../images/hamburger.png'
 import { ExploreHeader } from './Explore';
 
+//find image import
+import findimg from '../Image/findImg.png'
+import manfinding from '../Image/manfinding.png'
+import boredgirl from '../Image/boredgirl.png'
+import tiredman from '../Image/tiredman.jpg'
+import manhiding from '../Image/manhiding.png'
+import findheadimg3 from '../Image/findheadimg3.jpg'
+import findheadimg2 from '../Image/findheadimg2.png'
+import football from '../Image/football.png'
+import basketball from '../Image/basketball.png'
+import cricketball from '../Image/cricketball.png'
+import tennisball from '../Image/tennisball.png'
+
+
+// import manfinding from '../images/manfinding.png'
+
 const Find = () => {
   return (
     <div>
@@ -15,11 +31,18 @@ const Find = () => {
       <ExploreHeader />
       <div className='mainfind'>
         <FindHeader />
-        <div className='subcategoryMain dajt'>
-          
+          <h2 className='findtitle'>Sportsalize with people</h2>
+        <div style={{ padding: '0px', margin: '0px', marginTop: '1%'}} className='dajt'>
+          <img width={'26%'} height={'20%'} src={manfinding} alt='findman' />
+          <div className='backgroundfind'>
+            <h2 style={{ color: 'rgb(56, 80, 234)', textAlign:'center', margin  :'1%'}}>Getting board! Working alone! Stressed out! </h2>
+            <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Play with people of same interest </h1>
+            <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Just take a break</h1>
+          </div>
+          <img src={manhiding} alt='findman' className='manhiding' />
         </div>
       </div>
-    </div>   
+    </div>    
   )
 };
 
@@ -45,6 +68,12 @@ export const FindHeader = () => {
       <div>
         <Dropdown category={'Category🠻'} sports={'Sports'} esports={'Esports'} adventure={'Adventure'} professionalSports={'Professional Sports'} competitiveEsports={'Competitive Esports'}/>
       </div>
+      <img height={'60em'} width={'140em'} src={findheadimg3} alt="playing"/>
+      {/* <img height={'60em'} width={'140em'} src={findheadimg2} alt="playing"/> */}
+      <img className='footballanimation' height={'30em'} width={'50em'} src={football} alt="playing"/>
+      <img className='cricketanimation' height={'20em'} width={'30em'} src={cricketball} alt="playing"/>
+      <img className='tennisanimation' height={'20em'} width={'30em'} src={tennisball} alt="playing"/>
+      <img className='basketballanimation' height={'30em'} width={'50em'} src={basketball} alt="playing"/>
     </div>
   )
 };
