@@ -19,6 +19,8 @@ import football from '../Image/football.png'
 import basketball from '../Image/basketball.png'
 import cricketball from '../Image/cricketball.png'
 import tennisball from '../Image/tennisball.png'
+import pubg from '../Image/pubg.png'
+import bullet from '../Image/bullet.png'
 
 
 // import manfinding from '../images/manfinding.png'
@@ -32,8 +34,14 @@ const Find = () => {
       <div className='mainfind'>
         <FindHeader />
           <h2 className='findtitle'>Sportsalize with people</h2>
-        <div style={{ padding: '0px', margin: '0px', marginTop: '1%'}} className='dajt'>
-          <img width={'26%'} height={'15%'} src={manfinding} alt='findman' />
+        <div style={{ padding: '0px', margin: '0px', marginTop: '1%' }} className='dajt'>
+          <div className='bajt'>
+            <img width={'90%'} src={manfinding} alt='findman' />
+            <h1>Have same boring life</h1><br/>
+            <h2>Search for people|location</h2>
+            <h2>Get friends of your interests  </h2>
+            <h2>Get to know more people </h2>
+          </div>
           <div className='backgroundfind'>
             <h2 style={{ color: 'rgb(56, 80, 234)', textAlign:'center', margin  :'1%'}}>Getting board! Working alone! Stressed out! </h2>
             <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Play with people of same interest </h1>
@@ -74,6 +82,8 @@ export const FindHeader = () => {
       <img className='cricketanimation' height={'20em'} width={'30em'} src={cricketball} alt="playing"/>
       <img className='tennisanimation' height={'20em'} width={'30em'} src={tennisball} alt="playing"/>
       <img className='basketballanimation' height={'30em'} width={'50em'} src={basketball} alt="playing"/>
+      <img className='pubg' height={'70em'} width={'90em'} src={pubg} alt="playing"/>
+      <img className='bullet' height={'5em'} width={'30em'} src={bullet} alt="playing"/>
     </div>
   )
 };

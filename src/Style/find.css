@@ -11,7 +11,7 @@
 
 .mainfind{
     margin-left:15vw;
-    margin-top: 10vh;
+    margin-top: 8vh;
     align-items: center;
     justify-content: center;
     display: block;
@@ -180,4 +180,19 @@
 @keyframes tennis{
     from{top:0px;}
     to{top:30px;}
+}
+.bullet{
+    top:16px;
+    margin-left: 1em;
+    position: relative;
+    animation: gun 4s infinite;
+    animation-timing-function:linear;
+}
+@keyframes gun{
+    from{right:130px;}
+    to{right:250px;}
+}
+.pubg{
+    position: relative;
+    margin-left: 3em;
 }
