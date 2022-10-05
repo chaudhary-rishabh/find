@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/find/static/css/main.0e5dd468.css",
-    "main.js": "/find/static/js/main.b8acaf14.js",
+    "main.css": "/find/static/css/main.6a6e1dd5.css",
+    "main.js": "/find/static/js/main.0743e201.js",
     "static/media/nba.mp4": "/find/static/media/nba.0d095e5c3aa8b92c87bf.mp4",
     "static/media/gymgirl.jpg": "/find/static/media/gymgirl.294435737a01e6dc51dd.jpg",
     "static/media/suggestprofile.jpg": "/find/static/media/suggestprofile.2fe57521835b4acdf4d8.jpg",
@@ -80,7 +80,7 @@
     "static/media/taekwondo.png": "/find/static/media/taekwondo.c0d15af474789ee2ffa2.png",
     "static/media/squash.png": "/find/static/media/squash.db20b8d06adf9b9e7e2b.png",
     "static/media/discus.png": "/find/static/media/discus.9388aa13b4cc50b856ed.png",
-    "static/media/pubg.png": "/find/static/media/pubg.6e3bbbd80a66d0938062.png",
+    "static/media/pubg.png": "/find/static/media/pubg.4c3f383b79e38c40b325.png",
     "static/media/wrestling.png": "/find/static/media/wrestling.91e4da9937c97cd273fa.png",
     "static/media/postimg.jpg": "/find/static/media/postimg.b4ab978b1ff4870ab758.jpg",
     "static/media/badminton.png": "/find/static/media/badminton.57295325658b2e549c9e.png",
@@ -110,11 +110,11 @@
     "static/media/dance.png": "/find/static/media/dance.fc96f70cfeaf4b99bed6.png",
     "static/media/csgo.png": "/find/static/media/csgo.51871f1aad16f3bade1a.png",
     "index.html": "/find/index.html",
-    "main.0e5dd468.css.map": "/find/static/css/main.0e5dd468.css.map",
-    "main.b8acaf14.js.map": "/find/static/js/main.b8acaf14.js.map"
+    "main.6a6e1dd5.css.map": "/find/static/css/main.6a6e1dd5.css.map",
+    "main.0743e201.js.map": "/find/static/js/main.0743e201.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e5dd468.css",
-    "static/js/main.b8acaf14.js"
+    "static/css/main.6a6e1dd5.css",
+    "static/js/main.0743e201.js"
   ]
 }
