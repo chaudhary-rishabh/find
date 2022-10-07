@@ -35,8 +35,8 @@ const Adventure = () => {
                 <h1>Adventure</h1>
                 <div className='subcategoryMain dajt'>
                     {
-                        adventuresport.map((adv) => {
-                            return <Link id="nodecoration" to="/find/location" state={{ image: adv.img, name: adv.name } }><AdventureSports image={adv.img} name={adv.name} /></Link>
+                        adventuresport.map((adv, index) => {
+                            return <Link key={index} id="nodecoration" to="/find/location" state={{ image: adv.img, name: adv.name } }><AdventureSports image={adv.img} name={adv.name} /></Link>
                         })
                     }
                 </div>

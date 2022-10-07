@@ -57,13 +57,11 @@ const Explore = () => {
       <img src={hamburger} alt='hamburger' className='navslide' />
       <div className='navdiv'><Navbar /></div>
       <ExploreHeader />
-        {explorePosts.map((cmt) => {
-          return (
-            <div style={{ float: 'right', clear: 'both' }}>
-              { showComment && <Comments />}
-            </div>
-          )
-        })}
+        
+      <div style={{ float: 'right', clear: 'both' }}>
+        { showComment && <Comments />}
+      </div>
+          
       <div className='mainexplore' style={{marginLeft:'20vw'}}>
         {explorePosts.map((posts) => {
           return (
@@ -93,7 +91,7 @@ export const Slideshow = (props) => {
 
   return (
     <div className='postContainer'>
-      {props.key}
+      
       <div className='postHeader'>
         <Link to='/profile' state={{image:props.profileImg}}><img className='profileRadius' src={props.postHeadDp} height={'80px'} width={'80px'} alt="exploreimg" /></Link>
           <div>
@@ -135,7 +133,7 @@ export const ExploreHeader = (props) => {
 };
 
 
-const Comments = (props) => {
+const Comments = () => {
 
     // for adding Comments
   var [comment, setComment] = useState([]);
@@ -167,12 +165,6 @@ const Comments = (props) => {
     return setComment(comment.filter((cmt) => cmt.id !== id))
   };
 
-//display image tag after first comment is added
-  const firstCommentAdded = () => {
-    if (comment === '') {
-      return true;
-    } 
-  };
   return (
     <div className='comments'>
       <h2>Comments</h2>

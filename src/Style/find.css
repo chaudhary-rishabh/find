@@ -27,10 +27,16 @@
     background-image: url('../Image/tiredman.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 46vw;
+    width: 50em;
     height: 70vh;
     color:rgb(56, 80, 235);
     border-radius: 25px;
+}
+
+.findtxt{
+    font-size: 2em;
+    color: rgb(56, 80, 235);
+    text-align: center;
 }
 
 .findtitle{

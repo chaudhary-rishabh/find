@@ -163,8 +163,8 @@ const Profile = () => {
                 <Boxes itemname={'username'} item={locationState.name !== '' ? locationState.name: 'riyahnia' } />
                 <h2 style={{ cursor: 'pointer' }} onClick={closesuggests}>{suggest}</h2>
                 <div className='suggest dajt'>
-                    {SuggestList.map((users) => {
-                        return <Suggest SuggestList={SuggestList} following={locationState.followers} setFollowing={locationState.followers} friend={locationState.friends} setFriend={locationState.friends} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
+                    {SuggestList.map((users, index) => {
+                        return <Suggest key={index} SuggestList={SuggestList} following={locationState.followers} setFollowing={locationState.followers} friend={locationState.friends} setFriend={locationState.friends} profileimg={users.pic} username={users.username} followers={users.followers} friends={users.friends} rank={users.rank} />
                     })}
                 </div>
                 <div className='dajt activity'>

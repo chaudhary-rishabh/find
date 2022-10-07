@@ -79,24 +79,24 @@ const Esports = () => {
                 <h2 style={{color:'rgb(56, 80, 235)'}}>PC Games</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        pcgames.map((pgames) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:pgames.img, name:pgames.name}}><Pcgames image={pgames.img} name={pgames.name}/></Link>
+                        pcgames.map((pgames, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:pgames.img, name:pgames.name}}><Pcgames image={pgames.img} name={pgames.name}/></Link>
                         })
                     }
                 </div>
                 <h2 style={{color:'rgb(56, 80, 235)'}}>Mobile Games</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        mobilegames.map((mgames) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:mgames.img, name:mgames.name}}><Mobilegames image={mgames.img} name={mgames.name}/></Link>
+                        mobilegames.map((mgames, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:mgames.img, name:mgames.name}}><Mobilegames image={mgames.img} name={mgames.name}/></Link>
                         })
                     }
                 </div>
                 <h2 style={{color:'rgb(56, 80, 235)'}}>Other Games</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        othergames.map((ogames) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:ogames.img, name:ogames.name}}><Othergames image={ogames.img} name={ogames.name}/></Link>
+                        othergames.map((ogames, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:ogames.img, name:ogames.name}}><Othergames image={ogames.img} name={ogames.name}/></Link>
                         })
                     }
                 </div>

@@ -45,8 +45,8 @@ const Compiesports = () => {
                 <h1>Competitive Esports</h1>
                 <div className='subcategoryMain dajt'>
                     {
-                        compiesports.map((compi) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:compi.img, name:compi.name}}><CompetitiveEsports image={compi.img} name={compi.name}/></Link>
+                        compiesports.map((compi, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:compi.img, name:compi.name}}><CompetitiveEsports image={compi.img} name={compi.name}/></Link>
                         })
                     }
                 </div>

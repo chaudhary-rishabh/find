@@ -92,8 +92,8 @@ const Prosports = () => {
                 <h1>Professional Sports</h1>
                 <div className='subcategoryMain dajt'>
                     {
-                        professional.map((pro) => {
-                            return <Link id="nodecoration" to="/find/location" state={{ image: pro.img, name: pro.name } }><ProfessionalSports image={pro.img} name={pro.name}/></Link>
+                        professional.map((pro, index) => {
+                            return <Link key={index} id="nodecoration" to="/find/location" state={{ image: pro.img, name: pro.name } }><ProfessionalSports image={pro.img} name={pro.name}/></Link>
                         })
                     }
                 </div>

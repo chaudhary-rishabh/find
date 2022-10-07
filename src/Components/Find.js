@@ -37,17 +37,16 @@ const Find = () => {
         <div style={{ padding: '0px', margin: '0px', marginTop: '1%' }} className='dajt'>
           <div className='bajt'>
             <img width={'90%'} src={manfinding} alt='findman' />
-            <h1>Have same boring life</h1><br/>
+            {/* <h1>Have same boring life</h1><br/>
             <h2>Search for people|location</h2>
             <h2>Get friends of your interests  </h2>
-            <h2>Get to know more people </h2>
+            <h2>Get to know more people </h2> */}
           </div>
           <div className='backgroundfind'>
-            <h2 style={{ color: 'rgb(56, 80, 234)', textAlign:'center', margin  :'1%'}}>Getting board! Working alone! Stressed out! </h2>
-            <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Play with people of same interest </h1>
-            <h1 style={{ color: 'rgb(56, 80, 234)', textAlign:'center'}}>Just take a break</h1>
+            <h2 className='findtxt'>Getting board! Working alone! Stressed out! </h2>
+            <h1 className='findtxt'>Play with people of same interest </h1>
+            <h1 className='findtxt'>Just take a break</h1>
           </div>
-          <img src={manhiding} alt='findman' className='manhiding' />
         </div>
       </div>
     </div>    

@@ -138,24 +138,24 @@ const Sports = () => {
                 <h2 style={{color:'rgb(56, 80 ,236)'}}>Indoor Sports</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        indoorSports.map((isports) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:isports.img, name:isports.name}}><Indoor image={isports.img} name={ isports.name } /></Link>
+                        indoorSports.map((isports, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:isports.img, name:isports.name}}><Indoor image={isports.img} name={ isports.name } /></Link>
                         })
                     }                
                 </div>
                 <h2 style={{color:'rgb(56, 80 ,236)'}}>Outdoor Sports</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        outdoorSports.map((osports) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:osports.img, name:osports.name}}><Outdoor image={osports.img} name={ osports.name } /></Link>
+                        outdoorSports.map((osports, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:osports.img, name:osports.name}}><Outdoor image={osports.img} name={ osports.name } /></Link>
                         })
                     }                
                 </div>
                 <h2 style={{color:'rgb(56, 80 ,236)'}}>Other Sports</h2>
                 <div className='subcategoryMain dajt'>
                     {
-                        otherSports.map((othersports) => {
-                            return <Link id='nodecoration' to="/find/location" state={{image:othersports.img, name:othersports.name}}><Other image={othersports.img} name={ othersports.name } /></Link>
+                        otherSports.map((othersports, index) => {
+                            return <Link key={index} id='nodecoration' to="/find/location" state={{image:othersports.img, name:othersports.name}}><Other image={othersports.img} name={ othersports.name } /></Link>
                         })
                     }                
                 </div>
