@@ -109,18 +109,13 @@ body{
     border:0px;
 }
 
-.navclass{
+.navdiv{
     position:fixed;
     float:left;
-    clear:both;
     top:0;
 }
 
 @media only screen and (max-width:900px) {
-    .navclass {
-        visibility: hidden;
-    }
-
     .profileMain {
         margin-left: 0px;
     }

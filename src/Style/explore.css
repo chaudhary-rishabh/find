@@ -11,9 +11,9 @@ body{
     float: left;
     top: 0px;
 }
-.navdiv{
+/* .navdiv{
     clear: both;
-}
+} */
 .mainexplore {
     margin-left: 20vw;
     display: block;
@@ -75,7 +75,6 @@ body{
     justify-content: flex-start;
     cursor: pointer;
 }
-
 
 .comments{
     display: block;
@@ -141,5 +140,15 @@ body{
 @media only screen and (max-width: 1200px){
     .comments{
         display: none;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .postContainer{
+        width: 100%;
+    }
+    .mainexplore {
+        margin-left: 5px;
+        width: 95vw;
     }
 }

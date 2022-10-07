@@ -202,3 +202,18 @@
     position: relative;
     margin-left: 3em;
 }
+
+@media only screen and (max-width:900px) {
+    .indoor, .outdoor, .other{
+        padding: 0em;
+    }
+    .mainfind {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width:1250px){
+    .animation {
+        display: none;
+    }
+}

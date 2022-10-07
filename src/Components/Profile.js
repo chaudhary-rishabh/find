@@ -144,7 +144,7 @@ const Profile = () => {
     return (
         <div>
             <img src={hamburger} alt='hamburger' className='navslide' />
-            <div className='navclass'>
+            <div className='navdiv'>
                 <Navbar />
             </div>
             <ExploreHeader/>

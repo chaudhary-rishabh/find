@@ -57,12 +57,14 @@ const Explore = () => {
       <img src={hamburger} alt='hamburger' className='navslide' />
       <div className='navdiv'><Navbar /></div>
       <ExploreHeader />
-        
-      <div style={{ float: 'right', clear: 'both' }}>
-        { showComment && <Comments />}
-      </div>
-          
-      <div className='mainexplore' style={{marginLeft:'20vw'}}>
+      {explorePosts.map((cmt)=>{
+        return (
+          <div style={{ float: 'right', clear: 'both' }}>
+          {showComment && <Comments />}
+        </div>
+        )
+      })}    
+      <div className='mainexplore'>
         {explorePosts.map((posts) => {
           return (
             <Slideshow profileImg={posts.postHeadDp} postHeadDp={posts.postHeadDp} key={posts.id} post={posts.post} name={posts.name} time={uploadDate} sport={posts.sport} renderComment={renderComment} />
