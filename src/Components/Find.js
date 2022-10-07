@@ -43,8 +43,7 @@ const Find = () => {
             <h2>Get to know more people </h2> */}
           </div>
           <div className='backgroundfind'>
-            <h2 className='findtxt'>Getting board! Working alone! Stressed out! </h2>
-            <h1 className='findtxt'>Play with people of same interest </h1>
+            <h2 className='findtxt'>Getting board! Stressed out! </h2>
             <h1 className='findtxt'>Just take a break</h1>
           </div>
         </div>
