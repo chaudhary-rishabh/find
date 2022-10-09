@@ -92,10 +92,10 @@
     }
         .navdiv:hover {
             display: block;
-            top: 10vh;
+            top: 9vh;
         }
     .navdiv{
-        top: 10vh;
+        top: 9vh;
     }
 
     .exploreHeader {
@@ -109,7 +109,7 @@
 
 .navslide:hover+.navdiv {
     display: block;
-    top: 10vh;
+    top: 9vh;
 }
 
 .bajt {
