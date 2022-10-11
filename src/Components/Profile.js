@@ -132,7 +132,7 @@ const Profile = () => {
 
     //use location for getting data from one page to another
     const location = useLocation();
-    const [locationState, setLocationState] = useState({image:'', followers: '', friends:'', rank:'', name:''});
+    const [locationState, setLocationState] = useState({image:'', followers: '', friends:'', rank:'', name:'', username:''});
 
     useEffect(() => {
         if (location.state) {

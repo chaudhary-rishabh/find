@@ -15,7 +15,7 @@ import Prosports from "./Components/Prosports";
 
 function App() {
   return (
-    <div>
+    <div id="light">
       <Routes>
         <Route path='/' element={<Explore/>} />
         <Route path='profile' element={<Profile/>}></Route> 

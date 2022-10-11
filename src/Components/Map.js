@@ -1,21 +1,36 @@
 import React from 'react'
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import {useMemo} from 'react'
+import '../Style/common.css'
 
-export class MapContainer extends React.Component {
-  render() {
-    return (
-      <Map google={this.props.google} zoom={10} style={{width:'50%', height:'50%'}}
-          initialCenter={
-            {
-              lat: 28.704060,
-              lng: 77.102493
-            }
-          }>
-      </Map>
-    );
-  }
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+  useLoadScript
+} from '@react-google-maps/api'
+
+const Map = () => {
+  const center = useMemo(() => ({ lat: 22.3072, lng: 73.1812 }), []);
+  const options = useMemo(() => ({
+    disableDefaultUI: true,
+    clickableIcons:false
+   }), []);
+
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries:['places']
+  })
+
+  if (!isLoaded) {
+  return <h1>Loading....</h1>
 }
-
-export default GoogleApiWrapper({
-  API_KEY: ("AIzaSyAAj4PQ_3-3HGV64WT61MKeuDph7IQSYDA")
-})(MapContainer)
+  return (
+    <div>
+      <GoogleMap center={center} options={options} zoom={12} mapContainerClassName="map-container">
+      </GoogleMap>
+    </div>
+  )
+};
+export default Map
