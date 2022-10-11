@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/find/static/css/main.26a65a0c.css",
-    "main.js": "/find/static/js/main.e16397f1.js",
+    "main.css": "/find/static/css/main.881a75a1.css",
+    "main.js": "/find/static/js/main.c8469e0c.js",
     "static/media/nba.mp4": "/find/static/media/nba.0d095e5c3aa8b92c87bf.mp4",
     "static/media/gymgirl.jpg": "/find/static/media/gymgirl.294435737a01e6dc51dd.jpg",
     "static/media/suggestprofile.jpg": "/find/static/media/suggestprofile.2fe57521835b4acdf4d8.jpg",
@@ -111,11 +111,11 @@
     "static/media/dance.png": "/find/static/media/dance.fc96f70cfeaf4b99bed6.png",
     "static/media/csgo.png": "/find/static/media/csgo.51871f1aad16f3bade1a.png",
     "index.html": "/find/index.html",
-    "main.26a65a0c.css.map": "/find/static/css/main.26a65a0c.css.map",
-    "main.e16397f1.js.map": "/find/static/js/main.e16397f1.js.map"
+    "main.881a75a1.css.map": "/find/static/css/main.881a75a1.css.map",
+    "main.c8469e0c.js.map": "/find/static/js/main.c8469e0c.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a65a0c.css",
-    "static/js/main.e16397f1.js"
+    "static/css/main.881a75a1.css",
+    "static/js/main.c8469e0c.js"
   ]
 }
