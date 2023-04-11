@@ -76,12 +76,7 @@ export const FindHeader = () => {
       </div>
       <img  height={'60em'} width={'140em'} src={findheadimg3} alt="playing"/>
       {/* <img height={'60em'} width={'140em'} src={findheadimg2} alt="playing"/> */}
-      <img className='footballanimation animation' height={'30em'} width={'50em'} src={football} alt="playing"/>
-      <img className='cricketanimation animation' height={'20em'} width={'30em'} src={cricketball} alt="playing"/>
-      <img className='tennisanimation animation' height={'20em'} width={'30em'} src={tennisball} alt="playing"/>
-      <img className='basketballanimation animation' height={'30em'} width={'50em'} src={basketball} alt="playing"/>
-      <img className='pubg animation' height={'70em'} width={'90em'} src={pubg} alt="playing"/>
-      <img className='bullet animation' height={'5em'} width={'30em'} src={bullet} alt="playing"/>
+      
     </div>
   )
 };
