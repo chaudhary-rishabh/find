@@ -74,7 +74,9 @@ export const FindHeader = () => {
       <div>
         <Dropdown category={'Category🠻'} sports={'Sports'} esports={'Esports'} adventure={'Adventure'} professionalSports={'Professional Sports'} competitiveEsports={'Competitive Esports'}/>
       </div>
-      <img  height={'60em'} width={'140em'} src={findheadimg3} alt="playing"/>
+                                             
+  
+  
       {/* <img height={'60em'} width={'140em'} src={findheadimg2} alt="playing"/> */}
       
     </div>
